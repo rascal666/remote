@@ -1,0 +1,243 @@
+.buying {
+
+  .buyingInfo{
+    display: grid;
+    gap: 12px;
+    margin-bottom: 80px;
+    font-size: 18px;
+    font-weight: 600;
+
+    @media (max-width: 1024px) {
+      gap: 24px;
+    }
+
+    @media (max-width: 660px) {
+      font-size: 16px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .buyingList__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @media (max-width: 1024px) {
+      display: grid;
+      gap: 8px;
+    }
+
+
+    &-phone{
+      display: flex;
+      gap: 16px;
+
+      @media (max-width: 440px) {
+        display: grid;
+        width: fit-content;
+      }
+    }
+
+    &__note{
+      font-size: 12px;
+
+    }
+
+    &__link{
+      font-size: 14px;
+      background: #3b607a;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+    }
+
+  }
+
+
+
+  &__form{
+
+    &_title{
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+    &_note{
+      color: #777;
+      margin-top: 16px;
+    }
+  }
+
+  &__price{
+
+
+    &_contain{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: baseline;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &_block{
+      max-width: 700px;
+      width: 100%;
+      display: grid;
+      gap: 16px;
+
+      &:nth-child(1){
+        @media (max-width: 1024px) {
+          grid-row: 2;
+        }
+      }
+
+
+    }
+
+    &_title{
+      font-size: 41px;
+      font-weight: 600;
+      margin-bottom: 50px;
+
+      @media (max-width: 1024px) {
+        font-size: 30px;
+      }
+    }
+
+    &_note{
+      color: #777;
+      font-size: 12px;
+    }
+
+    &_buttonNote{
+      font-size: 12px;
+      max-width: 316px;
+      width: 100%;
+      display: block;
+    }
+  }
+
+
+
+  &__parameters{
+    margin-top: 80px;
+
+    @media (max-width: 660px) {
+      margin-top: 40px;
+    }
+
+    img{
+      max-width: 550px;
+      width: 100%;
+    }
+
+    &_contain{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.5fr;
+      gap: 24px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media (max-width: 660px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &_block{
+      border: 1px dotted #3b607a;
+      padding: 24px 24px;
+      border-radius: 15px;
+    }
+
+    &_title{
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 36px;
+    }
+
+    &_note{
+      font-size: 12px;
+      color: #777;
+      margin-top: 16px;
+    }
+
+    .itemList{
+      font-size: 14px;
+      font-weight: 500;
+      gap: 8px;
+
+      border-bottom: 1px dotted #3b607a;
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+
+    .ItemList__number{
+      font-size: 12px;
+      font-weight: 300;
+    }
+  }
+
+
+  &__question{
+
+    &_container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: self-start;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    &_title {
+      font-size: 41px;
+      font-weight: 500;
+      margin-bottom: 50px;
+    }
+
+    &_content{
+      display: grid;
+      gap: 16px;
+    }
+
+    &_form{
+
+      background-color: #9677ba;
+      padding: 40px;
+      border-radius: 16px;
+      color: white;
+
+      &-title{
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+
+      &-subtitle{
+        font-size: 16px;
+        color: aliceblue;
+      }
+
+      &-note {
+        font-size: 12px;
+        color: aliceblue;
+      }
+
+      form{
+        max-width: 500px;
+      }
+    }
+  }
+}

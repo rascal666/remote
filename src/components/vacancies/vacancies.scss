@@ -1,0 +1,63 @@
+.vacancies{
+
+  &__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  .title{
+    @media (max-width: 1024px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .accordion__content{
+    display: grid;
+    gap: 36px;
+  }
+
+  &__form{
+    max-width: 500px;
+
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+
+    .form{
+      @media (max-width: 1024px) {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    .button{
+      @media (max-width: 1024px) {
+        justify-self: center;
+      }
+    }
+  }
+
+  .accordion{
+    margin-top: 40px;
+    max-width: 1000px;
+  }
+
+
+  &__accordion{
+   &_title{
+     font-weight: 500;
+     margin-bottom: 16px;
+   }
+
+    &_list{
+      display: grid;
+      gap: 8px;
+    }
+  }
+}

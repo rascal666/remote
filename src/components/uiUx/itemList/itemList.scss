@@ -1,0 +1,14 @@
+.itemList {
+  display: flex;
+  align-items: center;
+
+  &__number{
+    margin-right: 8px;
+    color: #313135;
+  }
+
+  img{
+    margin-right: 8px;
+    max-width: 14px;
+  }
+}

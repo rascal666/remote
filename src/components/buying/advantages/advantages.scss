@@ -1,0 +1,26 @@
+.advantages{
+display: grid;
+grid-template-columns: auto 1fr;
+align-items: center;
+gap: 24px;
+  font-size: 18px;
+  font-weight: 500;
+
+  &__img{
+
+    @media (max-width: 1024px) {
+      width: 100px;
+    }
+    @media (max-width: 660px) {
+      width: 60px;
+    }
+  }
+
+  &__text{
+    white-space: pre-line;
+
+    @media (max-width: 660px) {
+      font-size: 14px;
+    }
+  }
+}

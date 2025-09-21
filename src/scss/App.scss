@@ -1,0 +1,31 @@
+@import "variable";
+
+body {
+
+  font-family: 'MontserratAlternates', sans-serif;
+  background: #f1f1f159;
+}
+
+body, a {
+  color: $base-color;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.vacancies, .vacancies, .contacts{
+  margin-top: 60px;
+}
+
+.hamburger-react{
+  display: none;
+
+  @media (max-width: 786px) {
+    display: block;
+  }
+}

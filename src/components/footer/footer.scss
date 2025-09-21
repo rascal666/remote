@@ -1,0 +1,24 @@
+.footer{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 60px;
+
+  @media (max-width: 640px) {
+    grid-auto-flow: row;
+    gap: 16px;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  &__logo img{
+    width: 9.6796875vw;
+    min-width: 100px;
+  }
+
+  &__email{
+    font-weight: 500;
+  }
+}

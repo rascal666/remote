@@ -1,0 +1,75 @@
+.request{
+  color: white;
+
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+
+  }
+
+  &__sale{
+    display: grid;
+    justify-content: space-between;
+    background: #9677ba;
+    padding: 2.6vw 3.2vw 3vw 3.1vw;
+    gap: 16px;
+  }
+
+  &__coolback{
+    padding: 2.6vw 3.2vw 3vw 3.1vw;
+    background: #779eba;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    align-content: baseline;
+
+    @media (max-width: 1024px) {
+      display: grid;
+    }
+  }
+
+  &__title{
+    font-size: 2vw;
+    max-width: 600px;
+
+    @media (max-width: 1024px) {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  &__form{
+    display: grid;
+    grid-gap: 8px;
+
+    &--title{
+      font-size: 1.7vw;
+      font-weight: 500;
+
+      //@media (max-width: 1024px) {
+      //  font-weight: normal;
+      //}
+    }
+
+    &--description{
+      font-size: .9vw;
+      opacity: .8;
+    }
+
+    &--note{
+      font-size: .6vw;
+    }
+  }
+
+
+  @media (max-width: 1024px) {
+    .form__title{
+      font-weight: normal;
+    }
+  }
+}
+

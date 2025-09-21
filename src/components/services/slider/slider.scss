@@ -1,0 +1,25 @@
+.sliderServices {
+ position: relative;
+
+  .left {
+    position: absolute;
+    left: -8px;
+    top: 47%;
+    z-index: 99;
+    background: white;
+
+  }
+
+  .rigth {
+    position: absolute;
+    right: -8px;
+    top: 47%;
+    z-index: 99;
+    background: white;
+  }
+
+  .arrow{
+    width: 32px;
+    height: 32px;
+  }
+}

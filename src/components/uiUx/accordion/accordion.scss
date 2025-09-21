@@ -1,0 +1,63 @@
+.accordion{
+  background: rgb(185 233 255 / 21%);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+
+
+
+  &__show{
+  background: #b9e9ff6b;
+    transition: all 0.3s ease;
+
+    .accordion__header_icon{
+      transform: rotate(45deg);
+      transition: 0.3s ease;
+    }
+  }
+
+  &:hover{
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: #b9e9ff6b;
+  }
+
+
+
+  &__content{
+    padding: 20px 40px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+
+    @media (max-width: 1024px) {
+      padding-top: 0;
+    }
+
+    @media (max-width: 660px) {
+      padding: 0 18px 22px 18px ;
+    }
+  }
+
+  &__header{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 28px 40px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+    gap: 16px;
+
+    @media (max-width: 660px) {
+      padding: 22px 18px ;
+    }
+
+    &_icon{
+      transition: all 0.3s ease;
+    }
+
+
+  }
+
+
+}
+

@@ -1,0 +1,43 @@
+.ingredients {
+  padding: 0;
+
+  li {
+    align-items: baseline;
+    display: flex;
+    margin-bottom: 0.5em;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+
+    @media (max-width: 660px) {
+      display: grid;
+      border-bottom: 1px dotted;
+      margin-bottom: 18px;
+      padding-bottom: 6px;
+      white-space: normal;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+
+  }
+
+  li::before {
+    content: '';
+    border-bottom: 1px dashed #ccc;
+    flex-grow: 1;
+    order: 2;
+    margin: 0 5px;
+
+    @media (max-width: 660px) {
+      border-bottom: none;
+    }
+  }
+
+  .value {
+    order: 3;
+    color: #3c4f99;
+  }
+}

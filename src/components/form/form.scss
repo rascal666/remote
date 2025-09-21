@@ -1,0 +1,38 @@
+.form{
+  display: grid;
+  gap: 16px;
+
+  div {
+    display: grid;
+  }
+
+  &__title{
+    font-weight: bold;
+    font-size: 26px;
+  }
+
+  &__subtitle{
+    font-size: 14px;
+  }
+
+  input {
+    border: 1px solid white;
+    padding: 16px 24px;
+    border-radius: 16px;
+    outline: none;
+    width: initial;
+
+  }
+
+
+  &__error{
+    color: #972b18;
+    font-size: 12px;
+    margin-top: -12px;
+  }
+
+  .input__error{
+    background: #fbe3e3;
+    border: 1px solid #fbe3e3;
+  }
+}

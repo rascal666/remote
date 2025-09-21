@@ -1,0 +1,23 @@
+.priceBlock{
+  &__block{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 120px;
+    margin: 40px 0;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 660px) {
+      gap: 0;
+      margin-bottom: 20px;
+    }
+  }
+  &__note{
+    font-size: 12px;
+    color: #444444;
+    margin-bottom: 24px;
+    display: block;
+  }
+}

@@ -1,0 +1,58 @@
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(60 71 80 / 81%);
+  backdrop-filter: blur(9px);
+  display: none;
+  z-index: 999;
+
+  &__content{
+    background: white;
+    padding: 60px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    display: none;
+  }
+
+  &__close{
+    position: absolute;
+    width: 24px;
+    top: 30px;
+    right: 24px;
+    cursor: pointer;
+
+    &:hover{
+      color: #972b18;
+    }
+  }
+
+  form{
+    text-align: center;
+    max-width: 400px;
+    justify-self: anchor-center;
+
+    input {
+      border: .5px solid #a7c8e3;
+    }
+
+    button{
+      margin: auto;
+    }
+
+    .form__subtitle{
+      margin-bottom: 24px;
+    }
+  }
+
+
+
+}
+.modalShow{
+  display: block;
+}

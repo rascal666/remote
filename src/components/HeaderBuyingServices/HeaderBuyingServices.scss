@@ -1,0 +1,140 @@
+
+.HeaderBuyingServices{
+  padding: 80px 0;
+  margin-bottom: 120px;
+  position: relative;
+
+
+
+  @media (max-width: 1024px) {
+    margin-bottom: 60px;
+    padding: 40px 0;
+  }
+
+  @media (max-width: 660px) {
+    margin-bottom: 40px;
+  }
+
+  .container{
+    margin: 0 auto 0;
+  }
+
+  &__block{
+    display: grid;
+    gap: 36px;
+
+    @media (max-width: 660px) {
+      gap: 24px;
+    }
+  }
+
+  &__title{
+    font-size: 52px;
+    font-weight: 600;
+    max-width: 45vw;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    @media (max-width: 1366px) {
+      font-size: 42px;
+    }
+
+    @media (max-width: 1260px) {
+      font-size: 35px;
+    }
+
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+    @media (max-width: 660px) {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+  }
+
+  &__ritgh{
+    display: grid;
+    justify-content: center;
+  }
+
+  &__list{
+    display: grid;
+    gap: 14px;
+    font-size: 14px;
+    font-weight: 500;
+
+    @media (max-width: 1024px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 660px) {
+      font-size: 16px;
+    }
+  }
+
+  &__bgImg{
+    position: absolute;
+    right: 120px;
+    bottom: -44px;
+    width: 53vw;
+    object-fit: contain;
+    max-height: 500px;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+
+    &-mobile{
+      display: none;
+
+      @media (max-width: 1024px) {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        max-height: 500px;
+        object-fit: contain;
+      }
+    }
+
+
+  }
+
+  &__content{
+    display: grid;
+    width: 95%;
+  }
+
+
+  &__back{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover > svg{
+      transition-duration: .3s;
+      background: black;
+      color: white;
+    }
+
+    @media (max-width: 660px) {
+      font-size: 14px;
+    }
+
+  }
+
+
+
+  form {
+    margin-top: 0px;
+    max-width: 300px;
+
+    input {
+    background: #ffffff00;
+      border: 1px solid #0b0b2c;
+    }
+
+
+  }
+}
