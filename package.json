@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://rascal666.github.io/remote/",
   "scripts": {
-    "predeploy": "npm run build && cp build/index.html build/404.html",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",

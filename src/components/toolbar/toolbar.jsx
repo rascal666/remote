@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import logo from "../../assets/img/icons/logo.svg";
 import phone from "../../assets/img/icons/phone.svg";
 import './toolbar.scss'
-import {useNavigate} from 'react-router-dom';
+import {NavLink, useNavigate} from 'react-router-dom';
 import Hamburger from 'hamburger-react'
 
 
@@ -55,7 +55,19 @@ const Toolbar = () => {
             <div className="navbar-menu">
                 {
                     menu.map((item, index) => (
-                        <span key={index}  className={activeIndex === index ? 'menuActive' : ''} onClick={() => onClickMenu(item.link, index)}>{item.title}</span>
+                        <NavLink
+                            key={index}
+                            to={item.link}
+                            // className может быть функцией в React Router v6+
+                            // Она получает объект с isActive, isPending, и т.д.
+                            className={({ isActive }) => isActive ? 'menuActive' : ''}
+                            // 'end' гарантирует, что ссылка активна только
+                            // при точном совпадении пути, а не просто при его начале.
+                            // Это важно, чтобы '/' не был активен, когда вы на '/contacts'.
+                            end
+                        >
+                            {item.title}
+                        </NavLink>
                     ))
                 }
             </div>

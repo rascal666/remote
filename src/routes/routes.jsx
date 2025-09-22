@@ -34,8 +34,6 @@ const AppRoutes = () => {
             {navigationRoutes.map((route) => (
                 <Route key={route.path} path={route.path} element={route.element}/>
             ))}
-            {/* Этот маршрут будет совпадать со всеми URL, которые не были обработаны выше */}
-            <Route path="*" element={<NotFoundPage />} />
         </Routes>
     );
 };

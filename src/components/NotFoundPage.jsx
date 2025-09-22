@@ -1,4 +1,3 @@
-// src/components/NotFoundPage.jsx (или где-то еще, где вы храните компоненты)
 import React from 'react';
 
 const NotFoundPage = () => {
