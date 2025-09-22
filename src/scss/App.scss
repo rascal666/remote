@@ -1,4 +1,4 @@
-@import "variable";
+@use "variable";
 
 body {
 
@@ -7,7 +7,7 @@ body {
 }
 
 body, a {
-  color: $base-color;
+  color: variable.$base-color;
   text-decoration: none;
   overflow-x: hidden;
 }

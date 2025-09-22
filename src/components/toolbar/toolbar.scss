@@ -1,4 +1,4 @@
-@import "../../scss/variable";
+@use "../../scss/variable";
 
 .navbar{
 
@@ -108,7 +108,7 @@
 
   .menuActive{
     cursor: pointer;
-    border-bottom: 2px solid $base-color;
+    border-bottom: 2px solid variable.$base-color;
   }
 
   &-logo img{
@@ -135,7 +135,7 @@
 
       &:hover {
         cursor: pointer;
-        border-bottom: 2px solid $base-color;
+        border-bottom: 2px solid variable.$base-color;
         transition: .5s ease;
       }
     }
