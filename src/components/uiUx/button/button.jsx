@@ -4,7 +4,6 @@ import './button.scss'
 const Button = ({children, disabled = false, buttonWhite=false, buttonWhiteBorder=false, ...props}) => {
 
    let styleButton = ''
-    console.log(styleButton)
     if (buttonWhite === true) {
         styleButton = 'button-white'
     }

@@ -138,7 +138,7 @@ const Buying = () => {
                         </div>
 
                         <div className="buying__question_form">
-                            <Form isForm='телевизовы' title='Обратный звонок:' subtitle='Наш специалист перезвонит вам в течение 5 мин' buttonTitle='вызов мастера'></Form>
+                            <Form isForm='Телевизор' title='Обратный звонок:' subtitle='Наш специалист перезвонит вам в течение 5 мин' buttonTitle='вызов мастера'></Form>
                         </div>
                     </div>
 

@@ -7,7 +7,6 @@ import Checkbox from '../uiUx/checkbox/checkbox.jsx';
 import { sendMessage } from '../../api/telegram.js';
 
 const Form = ({ isForm, buttonTitle, buttonWhite, showName = true, showPhone = true, subtitle, title }) => {
-
     const {
         register,
         handleSubmit,
@@ -119,7 +118,6 @@ const Form = ({ isForm, buttonTitle, buttonWhite, showName = true, showPhone = t
                 )
             }
             {
-                console.log(errors)
             }
             {errors.phone && <p className="form__error">{errors.phone.message}</p>}
 

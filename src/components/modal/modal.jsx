@@ -6,7 +6,6 @@ import CloseSvg from "../../svgIcons/closeSvg.jsx";
 const Modal = ({children, button }) => {
 
     const [isModal, setIsModal] = useState(false);
-    console.log(isModal)
     return (
         <div>
             <div className={'modal ' + (isModal? 'modalShow': '')} onClick={() => {setIsModal(false)}}>

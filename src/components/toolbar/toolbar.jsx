@@ -2,20 +2,18 @@ import React, {useEffect, useState} from 'react';
 import logo from "../../assets/img/icons/logo.svg";
 import phone from "../../assets/img/icons/phone.svg";
 import './toolbar.scss'
-import {NavLink, useNavigate} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import Hamburger from 'hamburger-react'
 
 
 const Toolbar = () => {
-
+    const location = useLocation();
     const [activeIndex, setActiveIndex] = useState(null);
     const [isVisible, setIsVisible] = useState(false);
     const [isOpen, setOpen] = useState(false)
 
     const handleScroll = () => {
-        console.log(window.scrollY)
         if (window.scrollY > 50) {
-            console.log(window.scrollY)
             setIsVisible(true);
         } else {
             setIsVisible(false);
@@ -32,42 +30,32 @@ const Toolbar = () => {
     }, []);
 
     const menu = [
-        {title: 'Главная', link:'/' },
-        {title: 'Услуги и цены', link:'/services'},
-        {title: 'Скупка техники', link:'/buying'},
-        {title: 'Вакансии', link:'/vacancies'},
-        {title: 'Контакты', link:'/contacts'},
+        {title: 'Главная', link:'/',  },
+        {title: 'Услуги и цены', link:'/services' },
+        {title: 'Скупка техники', link:'/buying' },
+        {title: 'Запчасти', link:'/spares' },
+        {title: 'Вакансии', link:'/vacancies' },
+        {title: 'Контакты', link:'/contacts' },
     ]
 
-    function onClickMenu(link, index) {
-        setActiveIndex(index)
-        navigate(link)
-        setOpen(false)
+
+    function onClickMenu() {
+
+        setTimeout(() => {
+            setOpen(false);
+        }, 100);
     }
 
 
-    const navigate = useNavigate();
     return (
-        <nav className={"navbar " + (isVisible && isOpen == false ? " navbar__absolute" : "") + (isOpen ? ' navbar__mobile' : '')}>
+        <nav className={"navbar " + (isVisible && isOpen === false ? " navbar__absolute" : "") + (isOpen ? ' navbar__mobile' : '')}>
             <a href='#' className="navbar-logo">
                 <img src={logo} alt=""/>
             </a>
             <div className="navbar-menu">
                 {
                     menu.map((item, index) => (
-                        <NavLink
-                            key={index}
-                            to={item.link}
-                            // className может быть функцией в React Router v6+
-                            // Она получает объект с isActive, isPending, и т.д.
-                            className={({ isActive }) => isActive ? 'menuActive' : ''}
-                            // 'end' гарантирует, что ссылка активна только
-                            // при точном совпадении пути, а не просто при его начале.
-                            // Это важно, чтобы '/' не был активен, когда вы на '/contacts'.
-                            end
-                        >
-                            {item.title}
-                        </NavLink>
+                        <Link key={index} to={item.link}  className={location.pathname === item.link ? 'menuActive' : ''} onClick={() => onClickMenu()}>{item.title}</Link>
                     ))
                 }
             </div>

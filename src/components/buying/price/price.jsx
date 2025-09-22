@@ -6,8 +6,8 @@ import ItemPrice from "../../uiUx/itemPrice/itemPrice.jsx";
 const Price = ({json, title}) => {
 
 
-    const priceList = json.map((item) => (
-        <ItemPrice price={item.price} title={item.title} />
+    const priceList = json.map((item, index) => (
+        <ItemPrice key={index} price={item.price} title={item.title} />
     ));
 
 

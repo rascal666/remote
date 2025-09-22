@@ -7,7 +7,7 @@ import HeaderBuyingServices from "../../HeaderBuyingServices/HeaderBuyingService
 
 const HeaderBuying = () => {
     return (
-        <HeaderBuyingServices bgColor='#EDEDED' title='Скупка неисправных, б/у телевизоров' bg={bg}>
+        <HeaderBuyingServices isForm='компьютеры' bgColor='#EDEDED' title='Скупка неисправных, б/у телевизоров' bg={bg}>
             <div className="HeaderBuyingServices__list">
                 <ItemList icon={check} text='Выезд курьера в течение 30 минут'/>
                 <ItemList icon={check} text='Оценка - бесплатно'/>
