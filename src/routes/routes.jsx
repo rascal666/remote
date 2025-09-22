@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Route, Routes} from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import Home from "../components/home/home.jsx";
 import Services from "../components/services/services.jsx";
 import Buying from "../components/buying/buying.jsx";
@@ -11,6 +11,7 @@ import Vacuum from "../components/services/pages/vacuum/vacuum.jsx";
 import Laptop from "../components/services/pages/laptop/laptop.jsx";
 import Karcher from "../components/services/pages/karcher/karcher.jsx";
 import Cofee from "../components/services/pages/cofee/cofee.jsx";
+import NotFoundPage from "../components/NotFoundPage.jsx";
 
 const AppRoutes = () => {
 
@@ -33,6 +34,8 @@ const AppRoutes = () => {
             {navigationRoutes.map((route) => (
                 <Route key={route.path} path={route.path} element={route.element}/>
             ))}
+            {/* Этот маршрут будет совпадать со всеми URL, которые не были обработаны выше */}
+            <Route path="*" element={<NotFoundPage />} />
         </Routes>
     );
 };
