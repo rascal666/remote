@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://rascal666.github.io/remoteremote.github.io/",
+  "homepage": "https://rascal666.github.io/remote/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
